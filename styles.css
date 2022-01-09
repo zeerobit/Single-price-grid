@@ -107,10 +107,6 @@ section {
 }
 body {
   line-height: 1;
-  background-color: var(--light_gray);
-  min-height: 100vh;
-  font-size: 16px;
-  font-family: var(--family_font);
 }
 ol,
 ul {
@@ -132,38 +128,48 @@ table {
   border-spacing: 0;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --cyan: hsl(179, 62%, 43%);
   --bright_yellow: hsl(71, 73%, 54%);
   --light_gray: hsl(204, 43%, 93%);
-  --grayish_blue: hsl(218, 22%, 67%); 
+  --grayish_blue: hsl(218, 22%, 67%);
   --white: hsl(0, 0%, 100%);
   --family_font: Karla, sans-serif;
   --light: 400;
   --bold: 700;
 }
 
-.container{
-  padding: 4.3rem 1.9rem ;
+body {
+  padding: 1.9rem;
+  background-color: var(--light_gray);
+  font-size: 1rem;
+  font-family: var(--family_font);
 }
 
-.container> * {
+.container {
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.container > * {
   padding: 1.75rem 1.5rem;
 }
 
-h2, h3, a {
+h2,
+h3,
+a {
   font-weight: var(--bold);
 }
 
 .community {
-  background-color: var(--white); 
-  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: var(--white);
 }
-
 
 .community__title {
   color: var(--cyan);
@@ -183,7 +189,6 @@ h2, h3, a {
   line-height: 1.8;
   color: var(--grayish_blue);
 }
-
 
 .subscription {
   background-color: var(--cyan);
@@ -223,13 +228,12 @@ h2, h3, a {
   text-decoration: none;
   color: var(--white);
   border-radius: 0.25rem;
-  box-shadow: 0px 0px 2px 2px  rgb(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0, 0.1);
 }
 
 .why {
   background-color: hsl(179, 47%, 52%);
   color: var(--white);
-  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .why__title {
@@ -244,6 +248,7 @@ h2, h3, a {
 .attribution {
   font-size: 0.8rem;
   text-align: center;
+  margin-top: 1rem;
 }
 .attribution a {
   color: var(--cyan);
@@ -251,10 +256,10 @@ h2, h3, a {
 }
 
 @media only screen and (min-width: 62rem) {
-   
   body {
     display: grid;
     place-content: center;
+    min-height: 100vh;
   }
 
   .container {
@@ -300,9 +305,8 @@ h2, h3, a {
 
   .subscription__button {
     transition: background-color 200ms ease;
-}
+  }
 
-  
   .subscription__button:hover {
     background-color: hsl(71, 73%, 48%);
   }
@@ -316,5 +320,4 @@ h2, h3, a {
   .why ul {
     line-height: 1.5;
   }
-
 }
